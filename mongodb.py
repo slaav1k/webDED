@@ -6,7 +6,7 @@ mdb = MongoClient(MONGODB_LINK)[MONGO_DB]
 
 
 def search_or_save_user(mdb, effective_user, total):
-    user = mdb.users.find_one({"username": effective_user.username})
+    user = mdb.users.find_one({"name": effective_user.first_name})
     if not user:
         user = {
             "username": effective_user.username,

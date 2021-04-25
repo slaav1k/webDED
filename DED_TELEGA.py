@@ -84,7 +84,7 @@ def info(update, context):
 
 
 def download_game(update, context):
-    update.message.reply_text('Ссылка на архив - https://clck.ru/UQido \nСсылка на установщик - https://clck.ru/UUtYt')
+    update.message.reply_text('Ссылка на архив - https://clck.ru/UQido \nСсылка на установщик - https://clck.ru/UVGK2')
 
 
 def website(update, context):
@@ -135,6 +135,7 @@ def yes(update, context):
     global flag
     global user
     user = search_or_save_user(mdb, update.effective_user, total)
+    print(update.effective_user)
     flag = 1
     update.message.reply_text(
         f"Тогда мы НАЧНАЕМ!\nГде живет дед мороз?\n1) На северном полюсе.\n2) На южном полюсе.\n3) В Крыму!\n4) В "
