@@ -1,7 +1,5 @@
 import datetime
 import random
-
-import aiogram
 import telebot
 from tok import TOKEN
 from telegram.ext import Updater, MessageHandler, Filters
@@ -14,7 +12,6 @@ from music import dt
 from translate import Translator
 import requests
 from mongodb import mdb, search_or_save_user, save_user_info
-from aiogram.types import KeyboardButton
 
 tb = telebot.TeleBot(TOKEN)
 due = 0
@@ -29,12 +26,6 @@ addFunction = [['/christmas_art'], ['/advice'], ['/time_untilNY'],
                ['/back']]
 ART = [['/christmas_image'], ['/christmas_music'],
        ['/back_to']]
-button1 = KeyboardButton('1')
-button2 = KeyboardButton('2')
-button3 = KeyboardButton('3')
-button4 = KeyboardButton('4')
-mW = KeyboardButton('/main_window')
-markupNEW = aiogram.types.ReplyKeyboardMarkup().row(button1, button2, button3).add(mW)
 reply_close_timer = [['/close']]
 choicer = [['/1'], ['/2'], ['/3'], ['/4'], ['/main_window']]
 markup = ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=False)
