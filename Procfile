@@ -1,1 +1,1 @@
-worker: python DED_TELEGA.py
+worker: python bot.py
