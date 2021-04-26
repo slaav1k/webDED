@@ -88,13 +88,12 @@ def download_game(update, context):
 
 
 def website(update, context):
-    update.message.reply_text('Наш сайт: https://slavina-flask-proga.herokuapp.com/', reply_markup=markup2)
+    update.message.reply_text('Наш сайт: https://clck.ru/UWG6a', reply_markup=markup2)
 
 
 def add_functions(update, context):
-    update.message.reply_text('1) Рандомная картинка или музыка с Рождеством!\n2) Рандомный совет на день!\n3) '
-                              'Случайный '
-                              'совет!\n4) Сколько дней до нового года?',
+    update.message.reply_text('1) Рандомная картинка или музыка с Рождеством!\n2) Случайный совет на день!\n3) '
+                              'Сколько дней до нового года?', 
                               reply_markup=markupFUNC)
 
 
@@ -124,6 +123,10 @@ def contacts(update, context):
                   photo)
     update.message.reply_text(
         f"@slaav1k")
+    photo2 = 'https://yt3.ggpht.com/ytc/AAUvwnhG1cgFUA4dLNGFb_D5DkPHEiFtL13RurafMUc=s900-c-k-c0x00ffffff-no-rj'
+    tb.send_photo(update.message.chat_id,
+                  photo2)
+    update.message.reply_text(f"@pasha882")
 
 
 def game_quiz(update, context):
@@ -153,33 +156,37 @@ def first(update, context):
         flag += 1
         total += 1
         update.message.reply_text(
-            "Верно!\nКак называется праздник, на который приходит Дед Мороз?\n1) Пасха.\n2) День знаний."
+            f"Верно! Ваш счет = {total}\nКак называется праздник, на который приходит Дед Мороз?\n1) Пасха.\n2) День "
+            f"знаний. "
             "\n3) Новый Год.\n4) Масленица.", reply_markup=markup_choice)
     elif flag == 5:
         flag += 1
         total += 1
         update.message.reply_text(
-            "Верно!\nЧто на ногах у Деда Мороза?\n1) Унты.\n2) Валенки."
+            f"Верно! Ваш счет = {total}\nЧто на ногах у Деда Мороза?\n1) Унты.\n2) Валенки."
             "\n3) Сапоги.\n4) Черевички.", reply_markup=markup_choice)
     elif flag == 13:
         flag += 1
         total += 1
         update.message.reply_text(
-            "Верно!\nУ представителей какого народа под Новый год принято вспоминать о совершенных грехах и давать "
+            f"Верно! Ваш счет = {total}\nУ представителей какого народа под Новый год принято вспоминать о "
+            f"совершенных грехах и давать "
             "обещание искупить их новыми делами в Новом году?\n1) Евреи.\n2) Aфганцы. "
             "\n3) Греки.\n4) Японцы.", reply_markup=markup_choice)
     elif flag == 14:
         flag += 1
         total += 1
         update.message.reply_text(
-            "Верно!\nКитайцы считают, что первый день наступившего года окутан злыми духами, которых необходимо "
+            f"Верно! Ваш счет = {total}\nКитайцы считают, что первый день наступившего года окутан злыми духами, "
+            f"которых необходимо "
             "отпугнуть. Чем китайцы их отпугивают?\n1) Рисом.\n2) Чаем. "
             "\n3) Петардами.\n4) Волшебными словами.", reply_markup=markup_choice)
     elif flag == 29:
         flag += 1
         total += 1
         update.message.reply_text(
-            "Верно!\nКаким образом волк из русской народной сказки «Лиса и волк» ловил рыбу в проруби?\n1) "
+            f"Верно! Ваш счет = {total}\nКаким образом волк из русской народной сказки «Лиса и волк» ловил рыбу в "
+            f"проруби?\n1) "
             "Удочкой.\n2) "
             "Хвостом. "
             "\n3) Лапой.\n4) Пастью.", reply_markup=markup_choice)
@@ -201,7 +208,7 @@ def first(update, context):
         out_info = "\n".join(out_info)
         print(list(all_info))
         update.message.reply_text(
-            f'ТЫ не угадал! {total}')
+            f'ТЫ не угадал! Твой счет: {total}')
         total = 0
         update.message.reply_text(
             f'А теперь рекорды! \n{out_info}')
@@ -215,33 +222,37 @@ def second(update, context):
         flag += 1
         total += 1
         update.message.reply_text(
-            "Верно!\nВокруг чего Дед Мороз, Снегурочка и дети водят хоровод?\n1) Вокруг елки.\n2) Вокруг пальмы."
+            f"Верно! Ваш счет = {total}\nВокруг чего Дед Мороз, Снегурочка и дети водят хоровод?\n1) Вокруг елки.\n2) "
+            f"Вокруг пальмы. "
             "\n3) Вокруг березы.\n4) Вокруг дуба.", reply_markup=markup_choice)
     elif flag == 6:
         flag += 1
         total += 1
         update.message.reply_text(
-            "Верно!\nВ какой стране дети и взрослые находят новогодние подарки на подоконнике?\n1) В Польше.\n2) В "
+            f"Верно! Ваш счет = {total}\nВ какой стране дети и взрослые находят новогодние подарки на "
+            f"подоконнике?\n1) В Польше.\n2) В "
             "Германии. "
             "\n3) В Америке.\n4) В Китае.", reply_markup=markup_choice)
     elif flag == 7:
         flag += 1
         total += 1
         update.message.reply_text(
-            "Верно!\nСколько шуб у Деда Мороза?\n1) 1.\n2) 2"
+            f"Верно! Ваш счет = {total}\nСколько шуб у Деда Мороза?\n1) 1.\n2) 2"
             ""
             "\n3) 3.\n4) 4.", reply_markup=markup_choice)
     elif flag == 9:
         flag += 1
         total += 1
         update.message.reply_text(
-            "Верно!\nЧто символизирует тройка лошадей?\n1) Любовь к троице.\n2) Счастье, радость и любовь."
+            f"Верно! Ваш счет = {total}\nЧто символизирует тройка лошадей?\n1) Любовь к троице.\n2) Счастье, радость "
+            f"и любовь. "
             "\n3) Количество зимних праздников.\n4) Зимние месяца.", reply_markup=markup_choice)
     elif flag == 11:
         flag += 1
         total += 1
         update.message.reply_text(
-            "Верно!\nПо указу какого царя датой празднования Нового года на Руси стало 1 января?\n1) Ивана "
+            f"Верно! Ваш счет = {total}\nПо указу какого царя датой празднования Нового года на Руси стало 1 "
+            f"января?\n1) Ивана "
             "Грозного.\n2) "
             "Александра I."
             "\n3) Петра I.\n4) Александра II.", reply_markup=markup_choice)
@@ -249,7 +260,7 @@ def second(update, context):
         flag += 1
         total += 1
         update.message.reply_text(
-            "Верно!\nВ каком городе получил прописку российский Дед Мороз?\n1) Новгород. "
+            f"Верно! Ваш счет = {total}\nВ каком городе получил прописку российский Дед Мороз?\n1) Новгород. "
             "\n2) "
             "Тула."
             "\n3) Великий Устюг.\n4) Оренбург.", reply_markup=markup_choice)
@@ -257,7 +268,7 @@ def second(update, context):
         flag += 1
         total += 1
         update.message.reply_text(
-            "Верно!\nКто зимой в футболках и платьях, а летом – в шубах?\n1) Человек. "
+            f"Верно! Ваш счет = {total}\nКто зимой в футболках и платьях, а летом – в шубах?\n1) Человек. "
             "\n2) "
             "Заяц."
             "\n3) Моль.\n4) Медведь.", reply_markup=markup_choice)
@@ -265,7 +276,7 @@ def second(update, context):
         flag += 1
         total += 1
         update.message.reply_text(
-            "Верно!\nЧем запасается российский бурый медведь перед зимним сном?\n1) Вяленой рыбой."
+            f"Верно! Ваш счет = {total}\nЧем запасается российский бурый медведь перед зимним сном?\n1) Вяленой рыбой."
             "\n2) "
             "Сушёной малиной."
             "\n3) Терпением.\n4) Подкожным жиром.", reply_markup=markup_choice)
@@ -273,7 +284,7 @@ def second(update, context):
         flag += 1
         total += 1
         update.message.reply_text(
-            "Верно!\nКак называют кактус, который цветет только в зимнее время?\n1) Революционер."
+            f"Верно! Ваш счет = {total}\nКак называют кактус, который цветет только в зимнее время?\n1) Революционер."
             "\n2) "
             "Полярник."
             "\n3) Декабрист.\n4) Коммунист.", reply_markup=markup_choice)
@@ -281,7 +292,8 @@ def second(update, context):
         flag += 1
         total += 1
         update.message.reply_text(
-            "Верно!\nКакое слово нужно было собрать Каю из осколков льда в сказке Г.Х. Андерсена «Снежная королева», "
+            f"Верно! Ваш счет = {total}\nКакое слово нужно было собрать Каю из осколков льда в сказке Г.Х. Андерсена "
+            f"«Снежная королева», "
             "чтобы стать «самому себе господином», и чтобы получить от королевы «весь свет и пару новых коньков»?\n1) "
             "Дружба. "
             "\n2) "
@@ -305,7 +317,7 @@ def second(update, context):
         out_info = "\n".join(out_info)
         print(list(all_info))
         update.message.reply_text(
-            f'ТЫ не угадал! {total}')
+            f'ТЫ не угадал! Твой счет: {total}')
         total = 0
         update.message.reply_text(
             f'А теперь рекорды! \n{out_info}')
@@ -319,25 +331,26 @@ def third(update, context):
         flag += 1
         total += 1
         update.message.reply_text(
-            "Верно!\nЧто спрятано в мешке у Деда Мороза?\n1) Гранаты.\n2) Фрукты."
+            f"Верно! Ваш счет = {total}\nЧто спрятано в мешке у Деда Мороза?\n1) Гранаты.\n2) Фрукты."
             "\n3) Спорт инвентарь.\n4) Подарки.", reply_markup=markup_choice)
     elif flag == 8:
         flag += 1
         total += 1
         update.message.reply_text(
-            "Верно!\nСколько лошадей запрягает в сани Дед Мороз?\n1) Двух.\n2) Трех."
+            f"Верно! Ваш счет = {total}\nСколько лошадей запрягает в сани Дед Мороз?\n1) Двух.\n2) Трех."
             "\n3) Четырех.\n4) Семерых.", reply_markup=markup_choice)
     elif flag == 12:
         flag += 1
         total += 1
         update.message.reply_text(
-            "Верно!\nВ какой стране в XVI веке появилась первая елочная игрушка?\n1) Саксония.\n2) Австралия."
+            f"Верно! Ваш счет = {total}\nВ какой стране в XVI веке появилась первая елочная игрушка?\n1) "
+            f"Саксония.\n2) Австралия. "
             "\n3) Богемия.\n4) Германия.", reply_markup=markup_choice)
     elif flag == 16:
         flag += 1
         total += 1
         update.message.reply_text(
-            "Верно!\nЧему равна «сумма» декабря, января и февраля? \n1) Лету. "
+            f"Верно! Ваш счет = {total}\nЧему равна «сумма» декабря, января и февраля? \n1) Лету. "
             "\n2) "
             "Весне."
             "\n3) Осени.\n4) Зиме.", reply_markup=markup_choice)
@@ -345,7 +358,7 @@ def third(update, context):
         flag += 1
         total += 1
         update.message.reply_text(
-            "Верно!\nКакое из этих животных каждую зиму сбрасывает рога? \n1) Баран. "
+            f"Верно! Ваш счет = {total}\nКакое из этих животных каждую зиму сбрасывает рога? \n1) Баран. "
             "\n2) "
             "Лось."
             "\n3) Буйвол.\n4) Рогач.", reply_markup=markup_choice)
@@ -353,7 +366,7 @@ def third(update, context):
         flag += 1
         total += 1
         update.message.reply_text(
-            "Верно!\nКакой ягодный кустарник НЕ роняет на зиму листья?\n1) Малина. "
+            f"Верно! Ваш счет = {total}\nКакой ягодный кустарник НЕ роняет на зиму листья?\n1) Малина. "
             "\n2) "
             "Брусника."
             "\n3) Смородина.\n4) Ежевика.", reply_markup=markup_choice)
@@ -361,7 +374,8 @@ def third(update, context):
         flag += 1
         total += 1
         update.message.reply_text(
-            "Верно!\nКаким из слов заканчивается название 1-й симфонии П.И. Чайковского «Зимние…»?\n1) Морозы. "
+            f"Верно! Ваш счет = {total}\nКаким из слов заканчивается название 1-й симфонии П.И. Чайковского "
+            f"«Зимние…»?\n1) Морозы. "
             "\n2) "
             "Праздники."
             "\n3) Каникулы.\n4) Грёзы.", reply_markup=markup_choice)
@@ -369,7 +383,7 @@ def third(update, context):
         flag += 1
         total += 1
         update.message.reply_text(
-            "Верно!\nВ каком из этих зимних видов спорта соревнуются на санях?\n1) Фристайл. "
+            f"Верно! Ваш счет = {total}\nВ каком из этих зимних видов спорта соревнуются на санях?\n1) Фристайл. "
             "\n2) "
             "Биатлон."
             "\n3) Шорт-трек.\n4) Скелетон.", reply_markup=markup_choice)
@@ -391,7 +405,7 @@ def third(update, context):
         out_info = "\n".join(out_info)
         print(list(all_info))
         update.message.reply_text(
-            f'ТЫ не угадал! {total}')
+            f'ТЫ не угадал! Твой счет: {total}')
         total = 0
         update.message.reply_text(
             f'А теперь рекорды! \n{out_info}')
@@ -405,20 +419,21 @@ def fourth(update, context):
         flag += 1
         total += 1
         update.message.reply_text(
-            "Верно!\nКак зовут внучку Деда Мороза?\n1) Дюймовочка.\n2) Снегурочка."
+            f"Верно! Ваш счет = {total}\nКак зовут внучку Деда Мороза?\n1) Дюймовочка.\n2) Снегурочка."
             "\n3) Несмеяна.\n4) Мария Васильевна.")
     elif flag == 10:
         flag += 1
         total += 1
         update.message.reply_text(
-            "Верно!\nКак величали сурового предшественника современного русского Деда Мороза?\n1) Дед Колотун.\n2) "
+            f"Верно! Ваш счет = {total}\nКак величали сурового предшественника современного русского Деда Мороза?\n1) "
+            f"Дед Колотун.\n2) "
             "Дед Трескун. "
             "\n3) Дед Вьюговей.\n4) Дед Иван.", reply_markup=markup_choice)
     elif flag == 17:
         flag += 1
         total += 1
         update.message.reply_text(
-            "Верно!\nНазовёте «зимний» синоним глагола «поколотить»? \n1) Побить. "
+            f"Верно! Ваш счет = {total}\nНазовёте «зимний» синоним глагола «поколотить»? \n1) Побить. "
             "\n2) "
             "Отмутузить."
             "\n3) Исколотить.\n4) Отметелить.", reply_markup=markup_choice)
@@ -426,7 +441,7 @@ def fourth(update, context):
         flag += 1
         total += 1
         update.message.reply_text(
-            "Верно!\nВо что впадают зимой некоторые животные?\n1) В детство. "
+            f"Верно! Ваш счет = {total}\nВо что впадают зимой некоторые животные?\n1) В детство. "
             "\n2) "
             "В спячку."
             "\n3) В бешенство.\n4) В беспамятство.", reply_markup=markup_choice)
@@ -434,7 +449,7 @@ def fourth(update, context):
         flag += 1
         total += 1
         update.message.reply_text(
-            "Верно!\nКакой из этих зверей зимой в спячку НЕ впадает?\n1) Бурый медведь. "
+            f"Верно! Ваш счет = {total}\nКакой из этих зверей зимой в спячку НЕ впадает?\n1) Бурый медведь. "
             "\n2) "
             "Барсук."
             "\n3) Куница.\n4) Сурок.", reply_markup=markup_choice)
@@ -442,7 +457,7 @@ def fourth(update, context):
         flag += 1
         total += 1
         update.message.reply_text(
-            "Верно!\nВ каком городе прорыт канал Зимняя канавка?\n1) В Москве. "
+            f"Верно! Ваш счет = {total}\nВ каком городе прорыт канал Зимняя канавка?\n1) В Москве. "
             "\n2) "
             "В Астрахани."
             "\n3) В Санкт-Петербурге.\n4) В Волгограде.", reply_markup=markup_choice)
@@ -450,7 +465,8 @@ def fourth(update, context):
         flag += 1
         total += 1
         update.message.reply_text(
-            "Верно!\nКакая из перечисленных птиц средней полосы России НЕ улетает на зимовку?\n1) Щегол. "
+            f"Верно! Ваш счет = {total}\nКакая из перечисленных птиц средней полосы России НЕ улетает на зимовку?\n1) "
+            f"Щегол. "
             "\n2) "
             "Соловей."
             "\n3) Скворец.\n4) Ласточка.", reply_markup=markup_choice)
@@ -478,6 +494,8 @@ def fourth(update, context):
             out_info.append(f'{k}) {i[0]} {i[1]}')
         out_info = "\n".join(out_info)
         update.message.reply_text(
+            f'Твой счет: {total}.\n')
+        update.message.reply_text(
             f'Рейтинговая таблица... \n{out_info}')
     else:
         user = search_or_save_user(mdb, update.effective_user, total)
@@ -496,7 +514,7 @@ def fourth(update, context):
         out_info = "\n".join(out_info)
         print(list(all_info))
         update.message.reply_text(
-            f'ТЫ не угадал! {total}')
+            f'ТЫ не угадал! Твой счет: {total}')
         total = 0
         update.message.reply_text(
             f'А теперь рекорды! \n{out_info}')
