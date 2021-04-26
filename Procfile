@@ -1,1 +1,1 @@
-web: python DED_TELEGA.py
+worker: python DED_TELEGA.py
