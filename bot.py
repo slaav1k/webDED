@@ -134,11 +134,9 @@ def game_quiz(update, context):
 def yes(update, context):
     global flag
     global user
-    global total
     user = search_or_save_user(mdb, update.effective_user, total)
     print(update.effective_user)
     flag = 1
-    total = 0
     update.message.reply_text(
         f"Тогда мы НАЧНАЕМ!\nГде живет дед мороз?\n1) На северном полюсе.\n2) На южном полюсе.\n3) В Крыму!\n4) В "
         f"Солотче!", reply_markup=markup_choice)
@@ -203,7 +201,8 @@ def first(update, context):
         out_info = "\n".join(out_info)
         print(list(all_info))
         update.message.reply_text(
-            f'ТЫ не угадал!')
+            f'ТЫ не угадал! {total}')
+        total = 0
         update.message.reply_text(
             f'А теперь рекорды! \n{out_info}')
         update.message.reply_text(
@@ -306,7 +305,8 @@ def second(update, context):
         out_info = "\n".join(out_info)
         print(list(all_info))
         update.message.reply_text(
-            f'ТЫ не угадал!')
+            f'ТЫ не угадал! {total}')
+        total = 0
         update.message.reply_text(
             f'А теперь рекорды! \n{out_info}')
         update.message.reply_text(
@@ -391,7 +391,8 @@ def third(update, context):
         out_info = "\n".join(out_info)
         print(list(all_info))
         update.message.reply_text(
-            f'ТЫ не угадал!')
+            f'ТЫ не угадал! {total}')
+        total = 0
         update.message.reply_text(
             f'А теперь рекорды! \n{out_info}')
         update.message.reply_text(
@@ -495,7 +496,8 @@ def fourth(update, context):
         out_info = "\n".join(out_info)
         print(list(all_info))
         update.message.reply_text(
-            f'ТЫ не угадал!')
+            f'ТЫ не угадал! {total}')
+        total = 0
         update.message.reply_text(
             f'А теперь рекорды! \n{out_info}')
         update.message.reply_text(
