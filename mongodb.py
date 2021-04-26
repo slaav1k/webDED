@@ -19,7 +19,7 @@ def search_or_save_user(mdb, effective_user, total):
 
 def save_user_info(mdb, user, effective_user, total):
     mdb.users.update_one(
-        {'username': effective_user.username},
+        {'name': effective_user.first_name},
         {'$set': {'total': total}}
     )
     return user
